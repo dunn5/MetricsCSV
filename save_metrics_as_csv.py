@@ -19,8 +19,8 @@ fp=open("output.csv","w")
 
 headers = ["skin_temp","heart_rate","air_temp","calories","gsr","steps"]
 
+fp.write("date ,")
 for header in headers:
-    fp.write(" ,")
     for j in range(0,1440):
         zero1= "0" if ((j-(j%60))/60)<10 else ""
         zero2= "0" if (j%60)<10 else ""
@@ -33,9 +33,10 @@ for element in dateList:
     ipdata=urllib2.urlopen(urlfirst+date+urlsecond)
     datatowrite=ipdata.read()
     dictdata = json.loads(datatowrite)
-    
+
+    fp.write(date+", ")
     for metric in dictdata["metrics"]:
-        fp.write(date+"_"+metric+", "+str(dictdata["metrics"][metric]["values"])[1:-1]+", ")
+        fp.write(str(dictdata["metrics"][metric]["values"])[1:-1]+", ")
     fp.write("\n")
     
 fp.close()
