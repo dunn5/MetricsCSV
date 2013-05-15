@@ -1,4 +1,5 @@
 #Author: Andrew Dunn
+#andrewedunn.net
 import urllib2
 import datetime
 import json
@@ -15,6 +16,17 @@ base = datetime.date.today()
 dateList = [ base - datetime.timedelta(days=x) for x in range(0,numdays) ]
 
 fp=open("output.csv","w")
+
+headers = ["skin_temp","heart_rate","air_temp","calories","gsr","steps"]
+
+for header in headers:
+    fp.write(" ,")
+    for j in range(0,1440):
+        zero1= "0" if ((j-(j%60))/60)<10 else ""
+        zero2= "0" if (j%60)<10 else ""
+        fp.write(header+"_"+zero1+str((j-(j%60))/60)+zero2+str(j%60)+", ")
+
+fp.write("\n")
 
 for element in dateList:
     date=str(str(element.year)+"-"+str(element.month)+"-"+str(element.day))
