@@ -41,6 +41,6 @@ Please note that it may take some time to download and more days = more time.
 [Process completed] will display when the download is complete. You can then view your data :)
 
 
-If you run the program again it will overwrite your previous csv file so be sure to resave your file with a new name or in a new location to avoid this problem.
+If you run the program again it will overwrite your previous csv file so be sure to resave your file with a new name or in a new location to avoid accidental overwrites.
 
 Enjoy!
