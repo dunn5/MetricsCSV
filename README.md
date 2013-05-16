@@ -18,9 +18,9 @@ Click Network
 Locate api/v1/chart
 
 Open that in a new tab
-In the URL there will be a code after "https://app.mybasis.com/api/v1/chart/" and before .json
+In the URL there will be a code after "https://app.mybasis.com/api/v1/chart/" and before ".json"
 This a unique identifier for your data. 
-Be aware that as of the writing of this readme this code is all it will take for someone to access 
+Be aware that as of the writing of this readme, this code is all it will take for someone to access 
 your data there are no other security measures in place.
 
 
@@ -34,7 +34,10 @@ Now you chould be able ot run your python file.
 When you run the script the command line will prompt you to enter the number of days you want to download starting with today.
 Enter the number and hit enter.
 The file will download.
+
+---------
 Please note that it may take some time to download and great numbers of days at a time will add to the overall length.
+
 If you run the program again it will overwrite your previous csv file so be sure to resave your file with a new name or in a new location to avoid this problem.
 
 Enjoy!
